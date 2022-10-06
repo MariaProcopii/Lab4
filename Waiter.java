@@ -1,13 +1,10 @@
-import javax.swing.*;
-import java.util.Random;
-
 public class Waiter extends Human implements Action{
 
     private final Menu menu;
     private final Meal meal;
     private final Player player;
     public int bill;
-    public int polite;                                     // 1 = bad, 2 = good, 3 = nice;
+    public int polite;
 
     public Waiter(Menu menu, Meal meal, Player player){
         this.menu = menu;
@@ -78,7 +75,7 @@ public class Waiter extends Human implements Action{
 
     public void tip() {
         if(player.tips == 1){
-            System.out.println("Waiter: " + player.name + ", thank's for the tip.");
+            System.out.println("Waiter: " + player.name + ", thanks for the tip.");
             setReputation(1);
         }
         if(player.opinion < 6){
