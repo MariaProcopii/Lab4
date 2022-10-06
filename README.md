@@ -3,7 +3,7 @@
 
 # Description:
 
-The root class, common-to-all classes, which ties all my actors in the simulation, is the `SuperClass`. I've made it as an abstract class to not be able to create an instance of this class. It contains common atributes as `mealNr`, `deckNr`, `cardNr` ... `reputation`. I'm using this atributes to provide a statistic in the end of my simulation. Also it has setters and getters.
+The root class, common-to-all classes, which ties all my actors in the simulation, is the `SuperClass`. I've made it an abstract class to not be able to create an instance of this class. It contains common atributes as `mealNr`, `deckNr`, `cardNr` ... `reputation`. I'm using this atributes to provide a statistic in the end of my simulation. Also it has setters and getters.
 
 `SuperClass` is inherited by `Entities` and `Human` abstract classes. `Human` is used to store atributes common to all descendent classes `names`  - array with names for actors, `phrases` - array of phrases for actors, `random`, `name` - randomly choosed name, `opinion` and methods. I've created abstraction using abstract classes and abstract methods like `greeting()`, `speak()`, `goodbye()`.
 
