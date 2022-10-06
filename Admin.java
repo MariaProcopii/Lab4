@@ -59,4 +59,14 @@ public class Admin extends Human{
                 "Players served: " + servicedPlayers + "\n" +
                 "Reputation: " + reputation + "\n");
     }
+
+//    public static void main(String[] args) {
+//        Player player1 = new Player();
+//        Table table1 = new Table(1, player1);
+//        Admin admin = new Admin(player1, table1, 100);
+//        player1.greeting();
+//        admin.greeting();
+//    }
 }
+
+
