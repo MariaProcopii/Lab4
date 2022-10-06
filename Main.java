@@ -43,6 +43,7 @@ public class Main {
             barman.greeting();
             waiter.bringBill();
             player.goodBye();
+            waiter.tip();
             admin.printStatistic();
         }
     }

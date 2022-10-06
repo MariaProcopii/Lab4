@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.util.Random;
 
-public class Waiter extends Human{
+public class Waiter extends Human implements Action{
 
     private final Menu menu;
     private final Meal meal;
@@ -69,5 +69,20 @@ public class Waiter extends Human{
                            + ", is " + bill + " $");
 
         System.out.println("Player: Now balance of my card is: " + player.moneyAmount() + " $");
+    }
+
+    public void complaint() {
+        System.out.println("Waiter: Sorry, " + player.name + " but our Book of Complaints is" +
+                " not available at the moment. :)");
+    }
+
+    public void tip() {
+        if(player.tips == 1){
+            System.out.println("Waiter: " + player.name + ", thank's for the tip.");
+            setReputation(1);
+        }
+        if(player.opinion < 6){
+            complaint();
+        }
     }
 }

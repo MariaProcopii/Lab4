@@ -1,11 +1,12 @@
 import java.util.ArrayList;
 
-public class Player extends Human{
+public class Player extends Human implements Action{
 //    public ArrayList<Player> customersList = new ArrayList<>();
     private String food;
     private String supply;
     private String meal;
     private int money;
+    public int tips = 0;
     public String getFood() {
         return food;
     }
@@ -65,18 +66,30 @@ public class Player extends Human{
         }
     }
 
+    public void tip() {
+        tips = 1;
+        int tip = random.nextInt(16) + 1;
+        while(tip > money){
+            tip = random.nextInt(16);
+        }
+        System.out.println("Player: Take " + tip + " $");
+    }
+
+    public void complaint() {
+        System.out.println("Player: I want to make a complaint.");
+        setReputation(-1);
+    }
+
     public void goodBye(){
         if(money > 0 && opinion > 3){
-            System.out.println("Player: you worked good and I've decided to leave you some money.");
-            
-            int tip = random.nextInt(16);
-            while(tip > money){
-                tip = random.nextInt(16);
-            }
-            System.out.println("Player: Take " + tip + " $");
+            System.out.println("Player: You worked good and I've decided to leave you some money.");
+            tip();
         }
         else{
-            System.out.println("Player: I'm not so satisfied to leave you money. Good bye.");
+            System.out.println("Player: I'm not so satisfied to leave you money.");
+            if(opinion < 6){
+                complaint();
+            }
         }
     }
 }
