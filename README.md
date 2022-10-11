@@ -1,5 +1,8 @@
 # Lab4
 
+# UML Class Diagram
+
+![Lab3 OOP](https://user-images.githubusercontent.com/77497709/195054363-c1425b0f-21a4-4823-a37c-ed5f50bd15cc.png)
 
 # Description:
 
